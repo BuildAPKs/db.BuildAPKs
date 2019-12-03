@@ -40,7 +40,7 @@ These files are located in ~/buildAPKs/var/db/, and their purpose is outlined in
 ∆ system files
 † logins which will NOT be built
 
-Grep can be used ` awk 'NR>=16 && NR<=41' ~/buildAPKs/var/db/README.md ` to view the \*NAMES files table in this file.  Use ` grep ∆ ~/buildAPKs/var/db/README.md ` to view only the \*NAMES system files and their definition.
+[Awk](https://www.gnu.org/software/gawk/manual/) can be used ` awk 'NR>=16 && NR<=41' ~/buildAPKs/var/db/README.md ` to view the \*NAMES files table in this file.  Use ` grep ∆ ~/buildAPKs/var/db/README.md ` to view only the \*NAMES system files and their definition.
 
 NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the rate limit for authenticated users of GitHub.  Use this OATH token file to enable OAuth authentication.  To create an OAuth token, you can use https://github.com/settings/tokens and insert this token into the first line in GAUTH.  File [GAUTH](https://raw.githubusercontent.com/BuildAPKs/buildAPKs/master/.conf/GAUTH) has more information.  
 
