@@ -5,10 +5,10 @@ The ` build.github*.bash ` commands use the ~/buildAPKs/var/db directory to assi
 This means that two very simple pull requests can be submitted:  One in buildAPKs by adding a name to the corresponding ` *NAMES ` file or files, a login name in each corresponding file per GitHub account.  The second pull request can be added in an appropriate [BuildAPKs](https://github.com/BuildAPKs) module repository by adding an ` _AT_ ` line in the suitable ma.bash file, one line of code per project.  If a GitHub account has many interesting projects, then multiple buildAPKs module repositories can recieve pull requests regarding the same user's projects.    
 
 1) To see the available ma.bash files you can use: 
-` find ~/buildAPKs/sources/ -type f -name ma.bash -exec cat {} \; `
+<code> find ~/buildAPKs/sources/ -type f -name ma.bash -exec cat {} \; </code>
 
 2) The lines concerning individual APK projects in ma.bash are: 
-` find ~/buildAPKs/sources/ -type f -name ma.bash -exec grep -H _AT_ {} \; `
+<code> find ~/buildAPKs/sources/ -type f -name ma.bash -exec grep -H _AT_ {} \; </code>
 
 The usage is: ` _AT_ login/repo commit ` and the file ~/buildAPKs/.gitmodules has information about each submodule repository.  The submodules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the submodules.  The ` _AT_ ` function itself is located in ` grep -r _AT_ ~/buildAPKs/scripts/ ` after the corresponding submodules have been cloned into the ~/buildAPKs/ directory.
 
