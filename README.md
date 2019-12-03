@@ -10,7 +10,7 @@ This means that two very simple pull requests can be submitted:  One in buildAPK
 2) The lines concerning individual APK projects in ma.bash are: 
 <code> find ~/buildAPKs/sources/ -type f -name ma.bash -exec grep -H _AT_ {} \; </code>
 
-The usage is: ` _AT_ login/repo commit ` and the file ~/buildAPKs/.gitmodules has information about each submodule repository.  The submodules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the submodules.  The ` _AT_ ` function itself is located in ` grep -r _AT_ ~/buildAPKs/scripts/ ` after the corresponding submodules have been cloned into the ~/buildAPKs/ directory.
+The usage is: <code> _AT_ login/repo commit </code> and the file ~/buildAPKs/.gitmodules has information about each submodule repository.  The submodules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the submodules.  The <code> _AT_ </code> function itself is located in <code> grep -r _AT_ ~/buildAPKs/scripts/ </code> after the corresponding submodules have been cloned into the ~/buildAPKs/ directory.
 
 Files var/db/[CEOUZ]NAMES may contain duplicate names.  File ` rm.dups.bash ` has more information.  Files var/db/[PRXZ]NAMES may contain duplicate names, and stop the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file or files to continue the build process.
 
