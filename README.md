@@ -12,7 +12,7 @@ This means that two very simple pull requests can be submitted:  One in buildAPK
 
 The usage is: ` _AT_ login/repo commit ` and the file ~/buildAPKs/.gitmodules has information about each submodule repository.  The submodules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the submodules.  The ` _AT_ ` function itself is located in ` grep -r _AT_ ~/buildAPKs/scripts/ ` after the corresponding submodules have been cloned into the ~/buildAPKs/ directory.
 
-Files [CEOUZ]NAMES may contain duplicate names.  File ` rm.dups.bash ` has more information.  Files [PRXZ]NAMES may contain duplicate names, and stop the build process.  Remove the corresponding account name from the [PRXZ]NAMES file or files to continue the build process.
+Files var/db/[CEOUZ]NAMES may contain duplicate names.  File ` rm.dups.bash ` has more information.  Files var/db/[PRXZ]NAMES may contain duplicate names, and stop the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file or files to continue the build process.
 
 These files are located in ~/buildAPKs/var/db/, and their purpose is outlined in this table:
 
