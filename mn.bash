@@ -13,12 +13,12 @@ _MERGEBFILES_ ()
 		if [ -f "$RDR/var/db/$FILENAME" ]	# file exists
 		then	# process file 
 			printf "%s\\n" "Processing $FILENAME"
-			NNAMESVAR=($(cut -f 1 -d ' ' "$RDR/var/db/$FILENAME"))	# create processed new names variable
-			for USENAME in ${NNAMESVAR[@]}
+			NNAMESARR=($(cut -f 1 -d ' ' "$RDR/var/db/$FILENAME"))	# create processed new names array
+			for USENAME in ${NNAMESARR[@]}
 			do
 				NEWNAME=$(grep "^$USENAME " "$RDR/var/db/$FILENAME" | head -1) ||:
 				OLDNAME=$(grep "^$USENAME " "$FILENAME" | head -1) ||:
-				if [[ -z "${OLDNAME:-}" ]]	# NEWNAME does not exist in db.BuildAPKs
+				if [[ -z "${OLDNAME:-}" ]]	# OLDNAME does not exist in db.BuildAPKs
 				then	# add NEWNAME to db.BuildAPKs
 					printf "%s\\n" "$NEWNAME" >> "$FILENAME"
 				else
