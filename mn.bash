@@ -28,10 +28,16 @@ _MERGEBFILES_ ()
  						printf "%s\\n" "$NEWNAME" >> "$FILENAME"
 :
 					else
-						if [[ $(awk '{print $5}' <<< $NEWNAME) -ne $(awk '{print $5}' <<< $OLDNAME) ]]	# number of AndroidManifest files found is not equal 
+						if [[ $(awk '{print $5}' <<< $NEWNAME) -ne $(awk '{print $5}' <<< $OLDNAME) ]]	# number of AndroidManifest.xml files found is not equal 
 						then	# delete OLDNAME and add NEWNAME 
  							sed -i "/^$USENAME /d" "$FILENAME"
  							printf "%s\\n" "$NEWNAME" >> "$FILENAME"
+						else
+							if [[ $(awk '{print $6}' <<< $NEWNAME) -ne $(awk '{print $6}' <<< $OLDNAME) ]]	# number of APK files built is unequal 
+							then	# delete OLDNAME and add NEWNAME 
+	 							sed -i "/^$USENAME /d" "$FILENAME"
+	 							printf "%s\\n" "$NEWNAME" >> "$FILENAME"
+							fi
 						fi
 					fi
 				fi
