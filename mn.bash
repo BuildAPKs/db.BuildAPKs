@@ -20,21 +20,25 @@ _MERGEBFILES_ ()
 				OLDNAME=$(grep "^$USENAME " "$FILENAME" | head -1) || _SIGNAL_ "14" "_MERGEBFILES_ OLDNAME"
 				if [[ -z "${OLDNAME:-}" ]]	# OLDNAME does not exist in db.BuildAPKs
 				then	# add NEWNAME to db.BuildAPKs
+					_PRINTA_
 					printf "%s\\n" "$NEWNAME" >> "$FILENAME"
 				else
 					if [[ $(awk '{print $2}' <<< $NEWNAME) -ne $(awk '{print $2}' <<< $OLDNAME) ]]	# dates are not equal
 					then	# delete OLDNAME and add NEWNAME 
+						_PRINTR_
  						sed -i "/^$USENAME /d" "$FILENAME"
  						printf "%s\\n" "$NEWNAME" >> "$FILENAME"
 :
 					else
 						if [[ $(awk '{print $5}' <<< $NEWNAME) -ne $(awk '{print $5}' <<< $OLDNAME) ]]	# number of AndroidManifest.xml files found is not equal 
 						then	# delete OLDNAME and add NEWNAME 
+							_PRINTR_
  							sed -i "/^$USENAME /d" "$FILENAME"
  							printf "%s\\n" "$NEWNAME" >> "$FILENAME"
 						else
 							if [[ $(awk '{print $6}' <<< $NEWNAME) -ne $(awk '{print $6}' <<< $OLDNAME) ]]	# number of APK files built is unequal 
 							then	# delete OLDNAME and add NEWNAME 
+								_PRINTR_
 	 							sed -i "/^$USENAME /d" "$FILENAME"
 	 							printf "%s\\n" "$NEWNAME" >> "$FILENAME"
 							fi
@@ -64,6 +68,12 @@ _MERGEFILES_ () {
 	printf "%s\\n" "Processing $MVNAMES names files: DONE"
 }
 
+_PRINTA_ () {
+	printf "%s\\n" "Adding ${NEWNAME}to $FILENAME; Continuing..."
+}
+_PRINTR_ () {
+	printf "%s\\n" "Replacing ${NEWNAME}in $FILENAME; Continuing..."
+}
 _SIGNAL_ () {
 		STRING="SIGNAL $1 generated in $2 ${0##*/} mn.bash!  Continuing...  "
 		printf "\\e[2;7;38;5;210m%s\\e[0m" "$STRING" 
