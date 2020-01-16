@@ -60,5 +60,5 @@ NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the
 ##### Information about shells:
    * [https://developer.ibm.com/tutorials/l-linux-shells/](https://developer.ibm.com/tutorials/l-linux-shells/)
    * [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html)
-   * [http://tldp.org/guides.html](http://tldp.org/guides.html)
+   * [http://www.tldp.org/guides.html](http://www.tldp.org/guides.html)
 <!-- README.md EOF -->
