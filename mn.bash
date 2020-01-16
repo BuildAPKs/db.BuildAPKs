@@ -16,8 +16,8 @@ _MERGEBFILES_ ()
 			NNAMESARR=($(cut -f 1 -d ' ' "$RDR/var/db/$FILENAME"))	# create processed new names array
 			for USENAME in ${NNAMESARR[@]}
 			do
-				NEWNAME=$(grep "^$USENAME " "$RDR/var/db/$FILENAME" | head -1) ||:
-				OLDNAME=$(grep "^$USENAME " "$FILENAME" | head -1) ||:
+				NEWNAME=$(grep "^$USENAME " "$RDR/var/db/$FILENAME" | head -1) || _SIGNAL_ "12" "_MERGEBFILES_ NEWNAME"
+				OLDNAME=$(grep "^$USENAME " "$FILENAME" | head -1) || _SIGNAL_ "14" "_MERGEBFILES_ OLDNAME"
 				if [[ -z "${OLDNAME:-}" ]]	# OLDNAME does not exist in db.BuildAPKs
 				then	# add NEWNAME to db.BuildAPKs
 					printf "%s\\n" "$NEWNAME" >> "$FILENAME"
@@ -49,8 +49,7 @@ _MERGEBFILES_ ()
 	printf "%s\\n" "Processing $MVNAMES names files: DONE"
 }
  
-_MERGEFILES_ ()
-{
+_MERGEFILES_ () {
 	MVNAMES="GNAMES QNAMES RNAMES YNAMES ZNAMES"
 	printf "%s\\n" "Processing $MVNAMES names files:"
 	for FILENAME in $MVNAMES
@@ -63,6 +62,11 @@ _MERGEFILES_ ()
 		fi
 	done
 	printf "%s\\n" "Processing $MVNAMES names files: DONE"
+}
+
+_SIGNAL_ () {
+		STRING="SIGNAL $1 generated in $2 ${0##*/} mn.bash!  Continuing...  "
+		printf "\\e[2;7;38;5;210m%s\\e[0m" "$STRING" 
 }
 if [ "${PWD##*/}" = db.BuildAPKs ]
 then 
