@@ -44,7 +44,7 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 | XNAMES †     | user created listing for accounts that will NOT be downloaded and built |
 | YNAMES †∆    | accounts that have AndroidManifest.xml file(s), but did not build any APKs with buildAPKs |
 | ZNAMES †∆    | account names that have zero APK projects |
-| mN.bash      | merge NAMES files from var/db into db.BuildAPKs |
+| mn.bash      | merge NAMES files from RDR/var/db into db.BuildAPKs |
 | rm.dups.bash | Depreciated: parses files for duplicate names |
 
 † names and projects that are NOT built
