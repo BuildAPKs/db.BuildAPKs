@@ -28,7 +28,7 @@ AnySoftKeyboard 9419359 94 31 /data/data/com.termux/files/home/buildAPKs/sources
 Arjun-sna 20200209 14563706 801 50 3
 Armyxxx 20200110 224882 230 3 1
 Artnoc1 20200116 202724849 13028 272 128
-Avocarrot 634353 25 5 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/avocarrot/Avocarrot-json2view-d823b41/json2view/src/main/com.avocarrot.json2view.apk
+Avocarrot 20200116 5778927 603 7 1
 Badel2 20200116 118398 147 1 1
 Bassel-Bakr 20191224 836640690 3287 153 60
 Blankj 22359562 450 70 5 com.cmj.autocheckedittext.apk
@@ -37,8 +37,8 @@ BoBoMEe 63912731 456 68 2 com.java.bobomee.algorithms_module.apk
 BoD 57120763 317 36 1 com.klinker.android.link_builder.apk
 Bubu 305897957 920 66 6 com.ridgelineapps.resdicegame.apk
 BullShark 20200116 53701235 235 7 2
-Comcast 17703065 236 48 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/comcast/Comcast-FreeFlow-9f7391d/FreeFlowTestsStub/org.freeflow.teststub.apk
-Countly 2175980 90 8 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/countly/Countly-countly-sdk-android-516ff83/sdk-native/src/main/ly.count.android.sdknative.apk
+Comcast 20200116 26109449 958 55 4
+Countly 20200116 164287671 2187 31 6
 Cutehacks 20191223 3444240 56 4 1
 CyanogenMod 623882658 4389 705 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/cyanogenmod/CyanogenMod-android_cts-558e7d9/hostsidetests/appsecurity/test-apps/DocumentProvider/com.android.cts.documentprovider.apk
 DWorkS 13678795 266 25 1 uk.co.senab.actionbarpulltorefresh.library.apk
@@ -106,7 +106,7 @@ SPAstef 20200116 19275384 122 7 2
 Sohil876 20200116 173480 125 2 1
 SubhamTyagi 20200209 40457124 165 15 1
 SushmithaManjunath 20200115 58885383 741 18 2
-TacoTheDank 20200116 164376829 1144 52 9
+TacoTheDank 20200209 149516326 4127 71 15
 TeamAmaze 20200209 5199049 53 6 2
 Tencent 20200115 541881713 2084 111 15
 Thiedze 661212 29 4 1 de.thiems.cwironman.apk
@@ -136,7 +136,7 @@ anthonycr 20200209 18100534 1740 20 4
 antitree 20200131 19623311 2531 9 2
 antlersoft 20200116 5636834 43 6 1
 aosp 20200109 1425079790 14726 402 145
-aosp-mirror 197523346 2149 505 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/aosp-mirror/aosp-mirror-platform_frameworks_base-096cd20/cmds/idmap2/tests/data/overlay/test.overlay.apk
+aosp-mirror 20200109 1015981852 21032 737 288
 apriorit 20200210 9309260 256 8 1
 aquatiko 196964992 1118 52 20 com.survivingwithandroid.actionbartabnavigation.apk
 ar- 20200209 82993401 269 8 3
@@ -185,7 +185,7 @@ euhoro 20200116 9406166 209 2 1
 everhopingandwaiting 131453798 1537 55 24 com.lamerman.apk
 evilrobot69 20191214 274247 17 2 1
 fAndreuzzi 20191223 41465043 339 37 3
-facebook 20200116 782537954 4602 236 19
+facebook 20200116 952657618 3991 304 36
 fathonyfath 20191223 2346678 67 7 1
 federicoiosue 20191217 8769673 53 13 3
 ferid60433 20200116 201328647 4094 32 9   
@@ -335,7 +335,7 @@ tamborello 20200202 12248705 578 1 1
 tanliner 20191214 48134157 202 40 9
 taoufix 20200107 18249745 151 21 2
 tensorflow 20200116 82485504 2648 16 4
-termux 20200203 21755519 2359 14 4
+termux 20200115 21755571 311 14 4
 thejunkjon 20200116 67896725 324 11 4
 thermatk 20191222 35891345 280 24 1
 thiagokokada 20200116 14210320 475 4 1
