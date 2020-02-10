@@ -10,44 +10,59 @@ Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a
 <code> find ~/buildAPKs/sources/ -type f -name ma.bash -exec cat {} \; </code>
 
 2) The lines concerning individual APK projects in ma.bash are: 
-<code> find ~/buildAPKs/sources/ -type f -name ma.bash -exec grep -H _AT_ {} \; </code>
+<code> grep -hr _AT_ ~/buildAPKs/sources/ </code>
 
-The usage is: <code> _AT_ login/repo commit </code> and the file ~/buildAPKs/.gitmodules has information about each submodule repository.  The submodules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the submodules.  The <code> _AT_ </code> function itself is located in <code> grep -r _AT_ ~/buildAPKs/scripts/ </code> after the corresponding submodules have been cloned into the ~/buildAPKs/ directory.
+The ma.bash file usage is: <code> _AT_ login/repo commit </code> and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the modules.  The <code> _AT_ </code> function itself is located in <code> grep -r _AT_ ~/buildAPKs/scripts/ </code> after the corresponding modules have been cloned into the ~/buildAPKs directory.
 
-Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file ` rm.dups.bash ` has more information.  Files var/db/[PRXZ]NAMES may also contain duplicate names. These files stop the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) to continue the build process.
+Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file ` rm.dups.bash ` has more information.  
 
-These files are located in ~/buildAPKs/var/db/ and their purpose is outlined in this table:
+Files ~/buildAPKs/.var/db/[PRXZ]NAMES may also contain duplicate names. However, these files halt the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) and the ~/buildAPKs/sources/github/{orgs,users}/name directory to continue to attempt to process this Github login if BuildAPKs created this directory.  Removing the corresponding ~/buildAPKs/sources/github/{orgs,users}/name directory and the name from the NAMES file(s) will continue the build process this Github login.
+
+These files are located in ~/buildAPKs/var/db and their purpose is outlined in this table:
 
 | File Name    | Purpose    |
 | ------------ | ---------  |
 | ANAMES †     | user created listing for APK project names that will NOT be downloaded and built |
-| BNAMES ∆     | login name, download size, build time, number of AndroidManifest.xml files found and number of APKs built that built at least 1 APK with buildAPKs on device |
-| B10NAMES ∆   | login name, download size, build time, number of AndroidManifest.xml files found and number of APKs built that built at least 10 APKs with buildAPKs on device |
-| B100NAMES ∆  | login name, download size, build time, number of AndroidManifest.xml files found and number of APKs built that built at least 100 APKs with buildAPKs on device |
-| ENAMES       | names with exceptional APK projects |
-| NUNAMES      | names with possible new APKs that might migrate to [OU]NAMES and ma.bash |
-| GNAMES ∆     | checked names and name type pairs |
+| BNAMES ∆     | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 1 APK on device |
+| B10NAMES ∆   | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 10 APKs on device |
+| B100NAMES ∆  | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 100 APKs on device |
+| B1KNAMES ∆   | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 1000 APKs on device |
+| DNAMES ∆     | login names and built date pairs |
+| ENAMES       | login names with exceptional APK projects |
+| FNAMES ∆     | login names and build time pairs |
+| MNAMES ∆     | login names and number of AndroidManifest.xml files pairs |
+| NUNAMES      | login names with possible new APKs that might migrate to ma.bash |
+| GNAMES ∆     | login names and login type pairs |
 | ONAMES       | organization names whose APKs build in buildAPKs on device |
-| PNAMES †     | pending names that are NOT downloaded and built, but might transition to ONAMES, UNAMES and ma.bash |
-| QNAMES ∆     | accounts that have AndroidManifest.xml file(s) |
+| PNAMES ∆†     | pending names that are NOT downloaded and built, but might transition to ONAMES, UNAMES and ma.bash |
+| QNAMES ∆     | accounts that have at least one AndroidManifest.xml file |
 | README.md    | this file |
+| SNAMES ∆     | login names and download size pairs |
 | TNAMES       | GitHub topics that build with buildAPKs on device |
-| UNAMES       | user names that have APK projects that build with buildAPKs on device |
+| WNAMES ∆     | login names and built APK projects pairs |
+| UNAMES       | login names names that have APK projects that build with buildAPKs on device |
 | XNAMES †     | user created listing for accounts that will NOT be downloaded and built |
 | YNAMES ∆†    | accounts that have AndroidManifest.xml file(s), but did not build any APKs with buildAPKs |
 | ZNAMES ∆†    | account names that have zero APK projects |
-| mn.bash      | merge NAMES files from RDR/var/db into db.BuildAPKs |
-| rm.dups.bash | DEPRECIATED: parses files for duplicate names |
+| mN.bash      | merge NAMES files from var/db into db.BuildAPKs |
+| rm.dups.bash | Depreciated: parses files for duplicate names |
 
 ∆ system files
 
 † names and projects that are NOT built
 
-Change requests to the database at [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) may be proposed [here](https://github.com/BuildAPKs/db.BuildAPKs/pulls).
+[Awk](https://www.gnu.org/software/gawk/manual/) can be used ` awk 'NR>=20 && NR<=52' ~/buildAPKs/var/db/README.md ` to view the \*NAMES files table in this file.  Use ` grep ∆ ~/buildAPKs/var/db/README.md ` to view only the \*NAMES system files and their definition.
 
-[Awk](https://www.gnu.org/software/gawk/manual/) can be used ` awk 'NR>=16 && NR<=46' ~/buildAPKs/var/db/README.md ` to view the \*NAMES files table in this file.  Use ` grep ∆ ~/buildAPKs/var/db/README.md ` to view only the \*NAMES system files and their definition.
+Change requests to the database located at [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) may be proposed [here](https://github.com/BuildAPKs/db.BuildAPKs/pulls).
 
-NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the rate limit for authenticated users of GitHub.  Use this OATH token file to enable OAuth authentication.  To create an OAuth token, you can use https://github.com/settings/tokens and insert this token into the first line in GAUTH.  File [GAUTH](https://raw.githubusercontent.com/BuildAPKs/buildAPKs/master/.conf/GAUTH) has more information.  
+This command: ` grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2}' | cut -c 1 | sort | uniq | cat ` assists in maintaining the file name structure.  These files contain data pair types:
+
+| DNAMES ∆     | login names and built date pairs |
+| FNAMES ∆     | login names and build time pairs |
+| GNAMES ∆     | login names and login type pairs |
+| MNAMES ∆     | login names and number of AndroidManifest.xml files pairs |
+| SNAMES ∆     | login names and download size pairs |
+| WNAMES ∆     | login names and built APK projects pairs |
 
 ##### Some source pages for NUNAMES:
    * [https://github.com/amitshekhariitbhu/awesome-android-complete-reference](https://github.com/amitshekhariitbhu/awesome-android-complete-reference)
@@ -61,4 +76,6 @@ NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the
    * [https://developer.ibm.com/tutorials/l-linux-shells/](https://developer.ibm.com/tutorials/l-linux-shells/)
    * [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html)
    * [http://www.tldp.org/guides.html](http://www.tldp.org/guides.html)
+
+NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the rate limit for authenticated users of GitHub.  Use this OATH token file to enable OAuth authentication.  To create an OAuth token, you can use https://github.com/settings/tokens and insert this token into the first line in GAUTH.  File [GAUTH](https://raw.githubusercontent.com/BuildAPKs/buildAPKs/master/.conf/GAUTH) has more information.  
 <!-- README.md EOF -->
