@@ -23,10 +23,11 @@ AigeStudio 20200116 8262634 115 17 6
 Android1 20191225 2091591 36 5 1
 AndroidAalto 20200113 3480810 256 9 2
 AndroidSecurityTools 20191223 187089666 376 27 3
+AnySoftKeyboard 9419359 94 31 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/anysoftkeyboard/AnySoftKeyboard-AnySoftKeyboard-API-67fccd2/api/src/main/com.anysoftkeyboard.api.apk
 Arjun-sna 20200209 14563706 801 50 3
 Armyxxx 20200110 224882 230 3 1
 Artnoc1 20200116 202724849 13028 272 128
-Avocarrot 20200116 5778927 603 7 1
+Avocarrot 634353 25 5 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/avocarrot/Avocarrot-json2view-d823b41/json2view/src/main/com.avocarrot.json2view.apk
 Badel2 20200116 118398 147 1 1
 Bassel-Bakr 20191224 836640690 3287 153 60
 Blankj 22359562 450 70 5 com.cmj.autocheckedittext.apk
@@ -35,10 +36,10 @@ BoBoMEe 63912731 456 68 2 com.java.bobomee.algorithms_module.apk
 BoD 57120763 317 36 1 com.klinker.android.link_builder.apk
 Bubu 305897957 920 66 6 com.ridgelineapps.resdicegame.apk
 BullShark 20200116 53701235 235 7 2
-Comcast 20200116 26109449 958 55 4
-Countly 20200116 164287671 2187 31 6
+Comcast 17703065 236 48 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/comcast/Comcast-FreeFlow-9f7391d/FreeFlowTestsStub/org.freeflow.teststub.apk
+Countly 2175980 90 8 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/countly/Countly-countly-sdk-android-516ff83/sdk-native/src/main/ly.count.android.sdknative.apk
 Cutehacks 20191223 3444240 56 4 1
-CyanogenMod 20191214 1246268959 9078 819 205
+CyanogenMod 623882658 4389 705 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/cyanogenmod/CyanogenMod-android_cts-558e7d9/hostsidetests/appsecurity/test-apps/DocumentProvider/com.android.cts.documentprovider.apk
 DWorkS 13678795 266 25 1 uk.co.senab.actionbarpulltorefresh.library.apk
 Devlight 20191223 2968650 349 28 3
 DroidPlanner 25890696 84 7 1 com.hoho.android.usbserial.apk
@@ -133,11 +134,11 @@ anthonycr 20200209 18100534 1740 20 4
 antitree 20200131 19623311 2531 9 2
 antlersoft 20200116 5636834 43 6 1
 aosp 20200109 1425079790 14726 402 145
-aosp-mirror 20200109 1015981852 21032 737 288
+aosp-mirror 197523346 2149 505 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/aosp-mirror/aosp-mirror-platform_frameworks_base-096cd20/cmds/idmap2/tests/data/overlay/test.overlay.apk
 apriorit 9309260 108 8 1 com.test.accessibilitydatamonitoring.apk
 aquatiko 196964992 1118 52 20 com.survivingwithandroid.actionbartabnavigation.apk
 ar- 20200209 82993401 269 8 3
-awslabs 20191223 8623489 498 12 1
+awslabs 7320259 77 12 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/awslabs/awslabs-aws-mobile-appsync-sdk-android-15affc1/aws-android-sdk-appsync-tests/src/main/com.example.aws_android_sdk_appsync_tests.apk
 axxapy 20200209 3759984 80 5 3
 bachma0507 20200115 218275233 6424 64 18
 barnhill 4990833 49 6 1 com.pnuema.android.marqueeview.apk
@@ -161,7 +162,7 @@ cuongmanhvo162 20200202 109735793 2913 100 9
 cychenyin 20200209 2603567 1004 2 1
 d 20191225 32533319 219 1 1
 d4rken 20191217 34788858 538 68 7
-delight-im 20191223 27059538 1070 36 13
+delight-im 27059538 217 36 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/delight-im/delight-im-Android-Audio-5aa04ca/Source/im.delight.android.audio.apk
 didi 20200108 39791017 149 30 3
 dipu-bd 20200112 116853009 285 209 6
 dogriffiths 20191224 26150339 542 36 9

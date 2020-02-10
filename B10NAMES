@@ -5,7 +5,7 @@
 7heaven 20200116 291934162 1587 89 24
 Artnoc1 20200116 202724849 13028 272 128
 Bassel-Bakr 20191224 836640690 3287 153 60
-CyanogenMod 20191214 1246268959 9078 819 205
+CyanogenMod 623882658 4388 705 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/cyanogenmod/CyanogenMod-android_cts-558e7d9/hostsidetests/appsecurity/test-apps/DocumentProvider/com.android.cts.documentprovider.apk
 EddieRingle 20191214 184889059 1439 171 58
 FireZenk 20191223 77801600 741 79 11
 Frank-Zhu 20191214 78477681 1475 152 98
@@ -33,7 +33,7 @@ amitkpandey 20191219 3440339361 11271 641 59
 android 20200209 368322921 4931 405 34
 androiddream 20191215 3766157447 14219 1093 241
 aosp 20200109 1425079790 14726 402 145
-aosp-mirror 20200109 1015981852 21032 737 288
+aosp-mirror 197523346 2149 505 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/aosp-mirror/aosp-mirror-platform_frameworks_base-096cd20/cmds/idmap2/tests/data/overlay/test.overlay.apk
 aporter 20191215 195436173 3311 306 251
 aquatiko 196964992 1118 52 20 com.survivingwithandroid.actionbartabnavigation.apk
 bachma0507 20200115 218275233 6423 64 18
@@ -44,7 +44,7 @@ christama 20200115 251151626 1014 102 19
 cirosantilli 20200127 370171169 7084 154 13
 commonsguy 20191215 87482027 14160 866 438
 cuongmanhvo162 20200202 188071041 3418 119 10
-delight-im 20191223 27059538 1070 36 13
+delight-im 27059538 217 36 /data/data/com.termux/files/home/buildAPKs/sources/github/orgs/delight-im/delight-im-Android-Audio-5aa04ca/Source/im.delight.android.audio.apk
 emtee40 20191223 1988397987 9566 441 53
 enovella 20191214 42153915 919 92 63
 eticzon 20200116 293372709 2275 323 30   
