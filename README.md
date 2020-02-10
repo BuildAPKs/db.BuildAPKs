@@ -34,7 +34,7 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 | NUNAMES      | login names with possible new APKs that might migrate to ma.bash |
 | GNAMES ∆     | login names and login type pairs |
 | ONAMES       | organization names whose APKs build in buildAPKs on device |
-| PNAMES ∆†     | pending names that are NOT downloaded and built, but might transition to ONAMES, UNAMES and ma.bash |
+| PNAMES †∆     | pending names that are NOT downloaded and built, but might transition to ONAMES, UNAMES and ma.bash |
 | QNAMES ∆     | accounts that have at least one AndroidManifest.xml file |
 | README.md    | this file |
 | SNAMES ∆     | login names and download size pairs |
@@ -42,14 +42,14 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 | WNAMES ∆     | login names and built APK projects pairs |
 | UNAMES       | login names names that have APK projects that build with buildAPKs on device |
 | XNAMES †     | user created listing for accounts that will NOT be downloaded and built |
-| YNAMES ∆†    | accounts that have AndroidManifest.xml file(s), but did not build any APKs with buildAPKs |
-| ZNAMES ∆†    | account names that have zero APK projects |
+| YNAMES †∆    | accounts that have AndroidManifest.xml file(s), but did not build any APKs with buildAPKs |
+| ZNAMES †∆    | account names that have zero APK projects |
 | mN.bash      | merge NAMES files from var/db into db.BuildAPKs |
 | rm.dups.bash | Depreciated: parses files for duplicate names |
 
-∆ system files
-
 † names and projects that are NOT built
+
+∆ system files
 
 [Awk](https://www.gnu.org/software/gawk/manual/) can be used ` awk 'NR>=20 && NR<=52' ~/buildAPKs/var/db/README.md ` to view the \*NAMES files table in this file.  Use ` grep ∆ ~/buildAPKs/var/db/README.md ` to view only the \*NAMES system files and their definition.
 
