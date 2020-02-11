@@ -16,7 +16,7 @@ The ma.bash file usage is: <code> _AT_ login/repo commit </code> and the file ~/
 
 Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file ` rm.dups.bash ` has more information.  
 
-Files ~/buildAPKs/.var/db/[PRXZ]NAMES may also contain duplicate names. However, these files halt the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) and the ~/buildAPKs/sources/github/{orgs,users}/name directory to continue to attempt to process this Github login if BuildAPKs created this directory.  Removing the corresponding ~/buildAPKs/sources/github/{orgs,users}/name directory and the name from the NAMES file(s) will continue the build process this Github login.
+Files ~/buildAPKs/var/db/[PRXZ]NAMES may also contain duplicate names. However, these files halt the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) and the ~/buildAPKs/sources/github/{orgs,users}/name directory to continue to attempt to process this Github login if BuildAPKs created this directory.  Removing the corresponding ~/buildAPKs/sources/github/{orgs,users}/name directory and the name from the NAMES file(s) will continue the build process this Github login.
 
 These files are located in ~/buildAPKs/var/db and their purpose is outlined in this table:
 
