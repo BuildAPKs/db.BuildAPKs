@@ -4,7 +4,7 @@
 # To create checksum files and commit use; ./do.sums.bash
 # To see file tree use; awk '{print $2}' sha512.sum
 # To check the files use; sha512sum -c sha512.sum
-#####################################################################
+################################################################################
 set -eu
 MTIME="$(ls -l --time-style=+"%s" .git/ORIG_HEAD 2>/dev/null | awk '{print $6}')"
 TIME="$(date +%s)"
@@ -29,9 +29,8 @@ do
 done
 git add .
 SN="$(sn.sh)" # sn.sh is found in https://github.com/BuildAPKs/maintenance.BuildAPKs/blob/master/sn.sh
-[[ -z "${1:-}" ]] && git commit -m "$SN" || [[ "${1//-}" = [Ss]* ]] && git commit -a -S -m "$SN" && pkill gpg-agent || git commit -m "$SN"  
+( [[ -z "${1:-}" ]] && git commit -m "$SN" ) || ( [[ "${1//-}" = [Ss]* ]] && git commit -a -S -m "$SN" && pkill gpg-agent ) || git commit -m "$SN"  
 git push
 ls
 printf "%s\\n" "$PWD"
 # do.sums.bash EOF
-# To create checksum files and commit use; ./do.sums.bash
