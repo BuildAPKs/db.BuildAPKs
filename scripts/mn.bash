@@ -2,8 +2,13 @@
 # Copyright 2019-2020 (c) all rights reserved
 # by BuildAPKs; see LICENSE  https://buildAPKs.github.io
 #####################################################################
-set -e
-RDR="$HOME/buildAPKs"
+set -eu
+export RDR="$HOME/buildAPKs"
+( [ $( awk '{print $5}' BNAMES | sort -gu | head -n 1 ) != 0 ] && echo ok ) || ( echo "BNAMES file is corrupt!  EXITING..." && exit )
+( [ $( awk '{print $2}' GNAMES | sort -gu | head -n 1 ) != 0 ] && echo ok ) || ( echo "GNAMES file is corrupt!  EXITING..." && exit )
+( [ $( awk '{print $5}' "$RDR/var/db/BNAMES" | sort -gu | head -n 1 ) != 0 ] && echo ok ) || echo "BNAMES file is corrupt!  EXITING..." && exit 
+( [ $( awk '{print $2}' "$RDR/var/db/GNAMES" | sort -gu | head -n 1 ) != 0 ] && echo ok ) || echo "GNAMES file is corrupt!  EXITING..." && exit 
+
 _MERGEBFILES_ ()
 {
 	MVNAMES="BNAMES B10NAMES B100NAMES B1KNAMES"
