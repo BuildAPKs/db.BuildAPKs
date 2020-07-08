@@ -32,7 +32,6 @@ else
 	echo "GNAMES file is corrupt!  EXITING..." 
 	exit 
 fi
-echo ok 
 
 _MERGEBFILES_ ()
 {
