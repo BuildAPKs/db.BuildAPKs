@@ -8,28 +8,28 @@ if [ $( awk '{print $5}' BNAMES | sort -gu | head -n 1 ) != 0 ]
 then
 	echo ok 
 else
-	echo "BNAMES file is corrupt!  EXITING..." 
+	echo "File BNAMES is corrupt!  EXITING..." 
 	exit 
 fi
 if [ $( awk '{print $2}' GNAMES | sort -u | wc -c ) = 18 ] 
 then
 	echo ok 
 else
-	echo "GNAMES file is corrupt!  EXITING..." 
+	echo "File GNAMES is corrupt!  EXITING..." 
 	exit 
 fi
 if [ $( awk '{print $5}' "$RDR/var/db/BNAMES" | sort -gu | head -n 1 ) != 0 ] 
 then
 	echo ok 
 else
-	echo "BNAMES file is corrupt!  EXITING..." 
+	echo "File ~/${RDR##*/}/var/db/BNAMES  is corrupt!  EXITING..." 
 	exit 
 fi
 if [ $( awk '{print $2}' "$RDR/var/db/GNAMES" | sort -u | wc -c ) = 18 ] 
 then
 	echo ok 
 else
-	echo "GNAMES file is corrupt!  EXITING..." 
+	echo "File ~/${RDR##*/}/var/db/GNAMES is corrupt!  EXITING..." 
 	exit 
 fi
 echo done 
