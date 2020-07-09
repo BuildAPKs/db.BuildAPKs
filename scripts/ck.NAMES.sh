@@ -32,5 +32,5 @@ else
 	echo "GNAMES file is corrupt!  EXITING..." 
 	exit 
 fi
-echo ok 
+echo done 
 # ck.NAMES.sh OEF
