@@ -6,28 +6,28 @@ set -eu
 export RDR="$HOME/buildAPKs"
 if [ $( awk '{print $5}' BNAMES | sort -gu | head -n 1 ) != 0 ]
 then
-	: # do noting
+	: # do nothing
 else
 	echo "File BNAMES is corrupt!  EXITING..." 
 	exit 
 fi
 if [ $( awk '{print $2}' GNAMES | sort -u | wc -c ) = 18 ] 
 then
-	: # do noting
+	: # do nothing
 else
 	echo "File GNAMES is corrupt!  EXITING..." 
 	exit 
 fi
 if [ $( awk '{print $5}' "$RDR/var/db/BNAMES" | sort -gu | head -n 1 ) != 0 ] 
 then
-	: # do noting
+	: # do nothing
 else
 	echo "File ~/${RDR##*/}/var/db/BNAMES  is corrupt!  EXITING..." 
 	exit 
 fi
 if [ $( awk '{print $2}' "$RDR/var/db/GNAMES" | sort -u | wc -c ) = 18 ] 
 then
-	: # do noting
+	: # do nothing
 else
 	echo "File ~/${RDR##*/}/var/db/GNAMES is corrupt!  EXITING..." 
 	exit 
