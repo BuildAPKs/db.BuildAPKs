@@ -4,15 +4,15 @@ The [` build.github*.bash`](https://buildapks.github.io/buildAPKs.github/) comma
 
 BASH command [` build.github.bash `](https://raw.githubusercontent.com/BuildAPKs/buildAPKs.github/master/build.github.bash) can attempt to build all the APK repos in a GitHub account on device today!  When you find a GitHub username that builds with buildAPKs, consider adding to buildAPKs by submitting a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) at [db.BuildAPKs/pulls](https://github.com/BuildAPKs/db.BuildAPKs/pulls) by adding to one or more of the ` *NAMES ` files, and to an appropriate ` ma.bash ` file with project source code commit reference if a project merits inclusion.
 
-Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a name to the corresponding ` *NAMES ` file or files, a login name in each corresponding file per GitHub account.  The second pull request can be added in an appropriate [BuildAPKs](https://github.com/BuildAPKs) module repository by adding an <code> _AT_ </code> line in the suitable ma.bash file, one line of code per project.  If a GitHub account has many interesting projects, then multiple buildAPKs module repositories can recieve pull requests regarding the same user's projects.    
+Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a name to the corresponding ` *NAMES ` file or files, a login name in each corresponding file per GitHub account.  The second pull request can be added in an appropriate [BuildAPKs](https://github.com/BuildAPKs) module repository by adding an `_AT_` line in the suitable ma.bash file, one line of code per project.  If a GitHub account has many interesting projects, then multiple buildAPKs module repositories can recieve pull requests regarding the same user's projects.    
 
 1) To see the available ma.bash files you can use: 
-<code> find ~/buildAPKs/sources/ -type f -name ma.bash -exec cat {} \; </code>
+`find ~/buildAPKs/sources/ -type f -name ma.bash -exec cat {} \;`
 
 2) The lines concerning individual APK projects in ma.bash are: 
-<code> grep -hr _AT_ ~/buildAPKs/sources/ </code>
+`grep -hr _AT_ ~/buildAPKs/sources/`
 
-The ma.bash file usage is: <code> _AT_ login/repo commit </code> and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the modules.  The <code> _AT_ </code> function itself is located in <code> grep -r _AT_ ~/buildAPKs/scripts/ </code> after the corresponding modules have been cloned into the ~/buildAPKs directory.
+The ma.bash file usage is: `_AT_ login/repo commit` and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the modules.  The `_AT_` function itself is located in `grep -r _AT_ ~/buildAPKs/scripts/` after the corresponding modules have been cloned into the ~/buildAPKs directory.
 
 Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file ` rm.dups.bash ` has more information.  
 
