@@ -1,4 +1,4 @@
-BuildAPKs GitHub *NAMES README.md
+BuildAPKs GitHub `*NAMES` README.md
 
 The [`build.github*.bash`](https://buildapks.github.io/buildAPKs.github/) commands use the ~/buildAPKs/var/db directory to assist in building APKs from GitHub.  The [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) repository is this directory archived.  The git repository [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) installs as a module into ~/buildAPKs/opt/db once https://buildapks.github.io/buildAPKs is installed.
 
@@ -48,7 +48,7 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 
 Pull requests to the [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) database can be proposed [here](https://github.com/BuildAPKs/db.BuildAPKs/pulls).
 
-This command: `grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2}' | cut -c 1 | sort | uniq` assists in maintaining the file name structure.  These database files are being developed and may contain data pair types:
+This command `grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2}' | cut -c 1 | sort | uniq` assists in maintaining the file name structure.  These database files are being developed and may contain data pair types:
 
 | File Name    | Purpose    |
 | ------------ | ---------  |
