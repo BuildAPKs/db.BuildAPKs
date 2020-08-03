@@ -1,10 +1,10 @@
-BuildAPKs GitHub ` *NAMES ` README.md
+BuildAPKs GitHub *NAMES README.md
 
-The [` build.github*.bash`](https://buildapks.github.io/buildAPKs.github/) commands use the ~/buildAPKs/var/db directory to assist in building APKs from GitHub.  The [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) repository is this directory archived.  The git repository [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) installs as a module into ~/buildAPKs/opt/db once https://buildapks.github.io/buildAPKs is installed.
+The [`build.github*.bash`](https://buildapks.github.io/buildAPKs.github/) commands use the ~/buildAPKs/var/db directory to assist in building APKs from GitHub.  The [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) repository is this directory archived.  The git repository [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) installs as a module into ~/buildAPKs/opt/db once https://buildapks.github.io/buildAPKs is installed.
 
-BASH command [` build.github.bash `](https://raw.githubusercontent.com/BuildAPKs/buildAPKs.github/master/build.github.bash) can attempt to build all the APK repos in a GitHub account on device today!  When you find a GitHub username that builds with buildAPKs, consider adding to buildAPKs by submitting a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) at [db.BuildAPKs/pulls](https://github.com/BuildAPKs/db.BuildAPKs/pulls) by adding to one or more of the ` *NAMES ` files, and to an appropriate ` ma.bash ` file with project source code commit reference if a project merits inclusion.
+BASH command [`build.github.bash`](https://raw.githubusercontent.com/BuildAPKs/buildAPKs.github/master/build.github.bash) can attempt to build all the APK repos in a GitHub account on device today!  When you find a GitHub username that builds with buildAPKs, consider adding to buildAPKs by submitting a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) at [db.BuildAPKs/pulls](https://github.com/BuildAPKs/db.BuildAPKs/pulls) by adding to one or more of the `*NAMES` files, and to an appropriate `ma.bash` file with project source code commit reference if a project merits inclusion.
 
-Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a name to the corresponding ` *NAMES ` file or files, a login name in each corresponding file per GitHub account.  The second pull request can be added in an appropriate [BuildAPKs](https://github.com/BuildAPKs) module repository by adding an `_AT_` line in the suitable ma.bash file, one line of code per project.  If a GitHub account has many interesting projects, then multiple buildAPKs module repositories can recieve pull requests regarding the same user's projects.    
+Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a name to the corresponding `*NAMES` file or files, a login name in each corresponding file per GitHub account.  The second pull request can be added in an appropriate [BuildAPKs](https://github.com/BuildAPKs) module repository by adding an `_AT_` line in the suitable ma.bash file, one line of code per project.  If a GitHub account has many interesting projects, then multiple buildAPKs module repositories can recieve pull requests regarding the same user's projects.    
 
 1) To see the available ma.bash files you can use: 
 `find ~/buildAPKs/sources/ -type f -name ma.bash -exec cat {} \;`
@@ -12,9 +12,9 @@ Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a
 2) The lines concerning individual APK projects in ma.bash are: 
 `grep -hr _AT_ ~/buildAPKs/sources/`
 
-The ma.bash file usage is: `_AT_ login/repo commit` and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the ` .gitmodules ` file and the modules.  The `_AT_` function itself is located in `grep -r _AT_ ~/buildAPKs/scripts/` after the corresponding modules have been cloned into the ~/buildAPKs directory.
+The ma.bash file usage is: `_AT_ login/repo commit` and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the `.gitmodules` file and the modules.  The `_AT_` function itself is located in `grep -r _AT_ ~/buildAPKs/scripts/` after the corresponding modules have been cloned into the ~/buildAPKs directory.
 
-Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file ` rm.dups.bash ` has more information.  
+Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file `rm.dups.bash` has more information.  
 
 Files ~/buildAPKs/var/db/[PRXZ]NAMES may also contain duplicate names. However, these files halt the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) and the ~/buildAPKs/sources/github/{orgs,users}/name directory to continue to attempt to process this Github login if BuildAPKs created this directory.  Removing the corresponding ~/buildAPKs/sources/github/{orgs,users}/name directory and the name from the NAMES file(s) will continue the build process this Github login.
 
@@ -44,11 +44,11 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 
 ∆ system files
 
-[Awk](https://www.gnu.org/software/gawk/manual/) can be used ` awk 'NR>=20 && NR<=46' ~/buildAPKs/var/db/README.md ` to view the \*NAMES files table in this file.  
+[Awk](https://www.gnu.org/software/gawk/manual/) can be used `awk 'NR>=20 && NR<=46' ~/buildAPKs/var/db/README.md` to view the \*NAMES files table in this file.  
 
 Pull requests to the [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) database can be proposed [here](https://github.com/BuildAPKs/db.BuildAPKs/pulls).
 
-This command: ` grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2}' | cut -c 1 | sort | uniq ` assists in maintaining the file name structure.  These database files are being developed and may contain data pair types:
+This command: `grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2}' | cut -c 1 | sort | uniq` assists in maintaining the file name structure.  These database files are being developed and may contain data pair types:
 
 | File Name    | Purpose    |
 | ------------ | ---------  |
@@ -64,7 +64,7 @@ This command: ` grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print 
 | mn.bash      | merge NAMES files from RDR/var/db into db.BuildAPKs |
 | rm.dups.bash | Depreciated: parses files for duplicate names |
 
-The command ` for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && echo $j && unset i j ` will show how many APKs can be built from the BNAMES file.
+The command `for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && echo $j && unset i j `will show how many APKs can be built from the BNAMES file.
 
 ##### Some source pages for NUNAMES:
    * [https://github.com/amitshekhariitbhu/awesome-android-complete-reference](https://github.com/amitshekhariitbhu/awesome-android-complete-reference)
