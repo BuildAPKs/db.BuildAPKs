@@ -1,6 +1,6 @@
 BuildAPKs GitHub ` *NAMES ` README.md
 
-The ` build.github*.bash ` commands use the ~/buildAPKs/var/db directory to assist in building APKs from GitHub.  The [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) repository is this directory archived.  The git repository [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) installs as a module into ~/buildAPKs/opt/db once https://buildapks.github.io/buildAPKs is installed.
+The [` build.github*.bash`](https://buildapks.github.io/buildAPKs.github/) commands use the ~/buildAPKs/var/db directory to assist in building APKs from GitHub.  The [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) repository is this directory archived.  The git repository [db.BuildAPKs](https://github.com/BuildAPKs/db.BuildAPKs/) installs as a module into ~/buildAPKs/opt/db once https://buildapks.github.io/buildAPKs is installed.
 
 BASH command [` build.github.bash `](https://raw.githubusercontent.com/BuildAPKs/buildAPKs.github/master/build.github.bash) can attempt to build all the APK repos in a GitHub account on device today!  When you find a GitHub username that builds with buildAPKs, consider adding to buildAPKs by submitting a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) at [db.BuildAPKs/pulls](https://github.com/BuildAPKs/db.BuildAPKs/pulls) by adding to one or more of the ` *NAMES ` files, and to an appropriate ` ma.bash ` file with project source code commit reference if a project merits inclusion.
 
