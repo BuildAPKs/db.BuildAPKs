@@ -12,11 +12,11 @@ Two very simple pull requests can be submitted:  One in db.BuildAPKs by adding a
 2) The lines concerning individual APK projects in ma.bash are: 
 `grep -hr _AT_ ~/buildAPKs/sources/`
 
-The ma.bash file usage is: `_AT_ login/repo commit` and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the `.gitmodules` file and the modules.  The `_AT_` function itself is located in `grep -r _AT_ ~/buildAPKs/scripts/` after the corresponding modules have been cloned into the ~/buildAPKs directory.
+The ma.bash file usage is:  `_AT_ login/repo commit` and the file ~/buildAPKs/.gitmodules has information about each module repository.  The modules located in ~/buildAPKs/sources/ contain module themed ma.bash files.  Running ~/buildAPKs/build.buildAPKs.modules.bash will populate the `.gitmodules` file and the modules.  The `_AT_` function itself is located in `grep -r _AT_ ~/buildAPKs/scripts/` after the corresponding modules have been cloned into the ~/buildAPKs directory.
 
 Files var/db/[BEOU]NAMES may contain duplicate names.  Depreciated file `rm.dups.bash` has more information.  
 
-Files ~/buildAPKs/var/db/[PRXZ]NAMES may also contain duplicate names. However, these files halt the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) and the ~/buildAPKs/sources/github/{orgs,users}/name directory to continue to attempt to process this Github login if BuildAPKs created this directory.  Removing the corresponding ~/buildAPKs/sources/github/{orgs,users}/name directory and the name from the NAMES file(s) will continue the build process this Github login.
+Files ~/buildAPKs/var/db/[PRXZ]NAMES may also contain duplicate names.  However, these files halt the build process.  Remove the corresponding account name from the var/db/[PRXZ]NAMES file(s) and the ~/buildAPKs/sources/github/{orgs,users}/name directory to continue to attempt to process this Github login if BuildAPKs created this directory.  Removing the corresponding ~/buildAPKs/sources/github/{orgs,users}/name directory and the name from the NAMES file(s) will continue the build process this Github login.
 
 These files are located in ~/buildAPKs/var/db and their purpose is outlined in this table:
 
@@ -62,7 +62,7 @@ This command `grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2
 | Other Files  | Purpose    |
 | ------------ | ---------  |
 | mn.bash      | merge NAMES files from RDR/var/db into db.BuildAPKs |
-| rm.dups.bash | Depreciated: parses files for duplicate names |
+| rm.dups.bash | Depreciated:  parses files for duplicate names |
 
 The command `for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && echo $j && unset i j `will show how many APKs can be built from the BNAMES file.
 
@@ -80,4 +80,4 @@ The command `for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && ech
    * [http://www.tldp.org/guides.html](http://www.tldp.org/guides.html)
 
 NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the rate limit for authenticated users of GitHub.  You can use this OATH token configuration file to enable OAuth authentication.  To create an OAuth token, https://github.com/settings/tokens can be used.  Insert your GitHub login and this token seperated with a collen (:) into the first line of file GAUTH.  File [GAUTH](https://raw.githubusercontent.com/BuildAPKs/buildAPKs/master/.conf/GAUTH) has more information.  
-<!-- README.md EOF -->
+<!-- db.BuildAPKs README.md EOF -->
