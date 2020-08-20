@@ -64,7 +64,7 @@ This command `grep NAMES ~/buildAPKs/var/db/README.md | grep \| | awk '{print $2
 | mn.bash      | merge NAMES files from RDR/var/db into db.BuildAPKs |
 | rm.dups.bash | Depreciated:  parses files for duplicate names |
 
-The command `for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && echo $j && unset i j `will show how many APKs can be built from the BNAMES file.
+The command `for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && echo $j && unset i j` will show how many APKs can be built from the BNAMES file.
 
 ##### Some source pages for NUNAMES:
    * [https://github.com/amitshekhariitbhu/awesome-android-complete-reference](https://github.com/amitshekhariitbhu/awesome-android-complete-reference)
