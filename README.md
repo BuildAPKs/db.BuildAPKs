@@ -22,7 +22,7 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 
 | File Name    | Purpose    |
 | ------------ | ---------  |
-| ANAMES †     | user created listing for APK project names that will NOT be downloaded and built |
+| ANAMES †u    | user created listing for APK project names that will NOT be downloaded and built |
 | BNAMES ∆     | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 1 APK on device |
 | B10NAMES ∆   | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 10 APKs on device |
 | B100NAMES ∆  | login names, download size, build time, number of AndroidManifest.xml files found and APKs built that built at least 100 APKs on device |
@@ -36,12 +36,12 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 | README.md    | this file |
 | TNAMES       | GitHub topics that build with buildAPKs on device |
 | UNAMES       | login names names that have APK projects that build with buildAPKs on device |
-| XNAMES †     | user created listing for accounts that will NOT be downloaded and built |
+| XNAMES †u    | user created listing for accounts that will NOT be downloaded and built |
 | YNAMES †∆    | accounts that have AndroidManifest.xml file(s), but did not build any APKs with buildAPKs |
 | ZNAMES †∆    | account names that have zero APK projects |
 
 † names and projects that are NOT built
-
+u files for the user to edit 
 ∆ system files
 
 [Awk](https://www.gnu.org/software/gawk/manual/) can be used `awk 'NR>=20 && NR<=46' ~/buildAPKs/var/db/README.md` to view the \*NAMES files table in this file.  
