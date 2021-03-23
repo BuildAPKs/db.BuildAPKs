@@ -41,7 +41,9 @@ These files are located in ~/buildAPKs/var/db and their purpose is outlined in t
 | ZNAMES †∆    | account names that have zero APK projects |
 
 † names and projects that are NOT built
+
 u files for the user to edit 
+
 ∆ system files
 
 [Awk](https://www.gnu.org/software/gawk/manual/) can be used `awk 'NR>=20 && NR<=46' ~/buildAPKs/var/db/README.md` to view the \*NAMES files table in this file.  
