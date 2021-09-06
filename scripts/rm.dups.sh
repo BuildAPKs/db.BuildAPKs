@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Copyright 2019-2020 (c) all rights reserved
+# Copyright 2019-2021 (c) all rights reserved
 # by BuildAPKs; see LICENSE  https://BuildAPKs.github.io
 # Deletes duplicate names from NUNAME file.
 # All names that build are: cat ONAMES UNAMES
