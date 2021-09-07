@@ -81,5 +81,5 @@ The command `for i in $(awk '{print $6}' BNAMES) ; do j=$(($j+$i)) ; done && ech
    * [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html)
    * [http://www.tldp.org/guides.html](http://www.tldp.org/guides.html)
 
-NOTE:  Adding a username token pair to ~/buildAPKs/.conf/GAUTH will increase the rate limit for authenticated users of GitHub.  You can use this OATH token configuration file to enable OAuth authentication.  To create an OAuth token, https://github.com/settings/tokens can be used.  Insert your GitHub login and this token seperated with a collen (:) into the first line of file GAUTH.  File [GAUTH](https://raw.githubusercontent.com/BuildAPKs/buildAPKs/master/.conf/GAUTH) has more information.  
+NOTE:  Adding a token pair to ~/buildAPKs/.conf/GAUTH will increase the rate limit for authenticated users of GitHub.  You can use this OATH token configuration file to enable OAuth authentication.  To create an OAuth token, https://github.com/settings/tokens can be used.  Insert a GitHub token pair seperated by a collen `:` into the first line of file GAUTH.  File [GAUTH](https://raw.githubusercontent.com/BuildAPKs/buildAPKs/master/.conf/GAUTH) has more information.  
 <!-- db.BuildAPKs README.md EOF -->
