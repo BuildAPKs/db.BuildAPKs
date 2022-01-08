@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-# Copyright 2019-2021 (c) all rights reserved
+# Copyright 2019-2022 (c) all rights reserved
 # by BuildAPKs; see LICENSE  https://BuildAPKs.github.io
 # Deletes duplicate names from NUNAME file.
-# All names that build are: cat ONAMES UNAMES
+# All names that build APKs on device; cat ONAMES UNAMES
 #####################################################################
 set -e
 printf "Processing duplicate names in NUNAMES.  Please wait..."
